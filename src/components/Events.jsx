@@ -41,21 +41,21 @@ function Event({ event }) {
   return (
     <div className="flex flex-row lg:space-x-5 space-x-4 lg:w-1/2 w-full mx-auto justify-center items-center h-48 rounded-lg bg-[#BEF3C0]">
       <div className="flex flex-col lg:w-1/4 w:1/5">
-        <p className="lg:text-5xl text-3xl font-roboto font-semibold text-[#1D2130]">
+        <p className="lg:text-5xl text-2xl font-roboto font-semibold text-[#1D2130]">
           {eventDay}
         </p>
-        <p className="text-[#1D2130] font-roboto">{eventMonth}</p>
+        <p className="text-[#1D2130] text-sm font-roboto">{eventMonth}</p>
       </div>
       <div className="lg:w-2/4 w-3/5">
         <div className="flex flex-row items-center lg:space-x-4 space-x-2">
           <p className="font-roboto text-[#1D2130] text-sm">NEXT EVENTS</p>
           <div className="border-t-2 bg-[#1D2130] mb-0 h-1 lg:w-[15%] w-14 rounded-xl"></div>
         </div>
-        <p className="text-[#1D2130] font-roboto font-semibold lg:text-2xl text-xl">
+        <p className="text-[#1D2130] font-roboto font-semibold lg:text-2xl text-lg">
           {event.title}
         </p>
       </div>
-      <div className="bg-white lg:w-16 lg:h-16 w-12 h-12 rounded-full flex items-center justify-center">
+      <div className="bg-white lg:w-16 lg:h-16 w-10 h-10 rounded-full flex items-center justify-center">
         <Link to={event.info}>
           <Icon
             className="text-[#1D2130] md:w-14 md:h-14 mt-2 w-full text-center"
@@ -71,7 +71,7 @@ export default function Events() {
     moment(b.date, "YYYYMMDD").diff(moment(a.date, "YYYYMMDD"))
   );
   return (
-    <div className="w-[90%] m-auto">
+    <div className="lg:w-[90%] w-full m-auto">
       <div className="flex flex-col lg:flex-row justify-between items-center space-y-1">
         <h2 className="text-xl font-roboto lg:text-lg text-center text-[#1D2130] lg:text-left">
           NOS ÉVÉNEMENTS
