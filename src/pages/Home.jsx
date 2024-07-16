@@ -13,18 +13,18 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <div className="lg:space-y-28 space-y-10">
+      {/* <Navbar /> */}
       <Banner />
       <AboutUs />
-      <Partener />
       <Whatwedo />
+      <Partener />
       <Project />
       <Spend />
       <Donate />
       <News />
       <Events />
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </div>
   );
 }

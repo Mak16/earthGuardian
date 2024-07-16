@@ -34,15 +34,15 @@ const projects = [
 function OneProject({ project }) {
   return (
     <div
-      className=" bg-cover flex rounded-lg flex-col lg:p-20 p-5 space-y-8"
+      className=" bg-cover relative flex rounded-lg flex-col lg:p-14 p-5 space-y-8"
       style={{ backgroundImage: `url(${project.bg})` }}
     >
-      <div className="absolute z-0 inset-0 bg-black rounded-rounded-lg   opacity-35"></div>
+      <div className="absolute z-0 inset-0 bg-black rounded-rounded-lg rounded-xl opacity-35"></div>
       <h3 className="z-10 font-roboto font-semibold lg:text-3xl text-2xl text-white">
         {project.title}
       </h3>
       <p className=" z-10 text-white"> {project.description} </p>
-      <div className="z-10 bg-white rounded-md w-1/3 text-center py-3 px-4">
+      <div className="z-10 bg-white rounded-md lg:w-1/3 w-1/2 text-center py-3 px-4">
         <Link className="text-[#1D2130]" to={project.info}>
           Voir plus
         </Link>
@@ -57,7 +57,7 @@ export default function Project({}) {
   return (
     <div className="flex flex-col w-[90%] lg:w-[90%] mx-auto space-y-8 lg:mt-5 py-16">
       <div className="lg:w-3/6 w-full flex lg:flex-row flex-col lg:space-x-5 space-x-0">
-        <div className="border-t-2 bg-[#1D2130] lg:mt-4 mb-4 h-1 lg:w-[15%] w-16 rounded-xl"></div>
+        <div className="border-t-2 bg-[#1D2130] lg:mt-4 mb-4 h-1 lg:w-[15%] w-12 rounded-xl"></div>
         <div className="lg:mt-1 -mt-8  lg:space-y-12 space-y-6">
           <h2 className="font-roboto text-xl text-center text-[#1D2130] lg:text-left">
             PROJETS RÉALISÉS
@@ -67,7 +67,7 @@ export default function Project({}) {
           </p>
         </div>
       </div>
-      <div className="w-[100%] relative m-auto flex lg:flex-row flex-col justify-center gap-6">
+      <div className="w-[100%] m-auto flex lg:flex-row flex-col justify-center gap-6">
         {sortedProjects.slice(0, 3).map((data, index) => (
           <OneProject key={index} project={data} />
         ))}

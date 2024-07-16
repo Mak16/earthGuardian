@@ -19,7 +19,7 @@ export default function AboutUs() {
   return (
     <div className="flex lg:flex-row flex-col w-[90%] lg:w-[90%] mx-auto space-y-8 lg:mt-5 py-16">
       <div className="lg:w-3/6 w-full flex lg:flex-row mx-auto flex-col space-x-0 lg:space-x-4">
-        <div className="border-t-2 bg-[#1D2130] lg:mt-4 mb-4 h-1 lg:w-[15%] w-16 rounded-xl"></div>
+        <div className="border-t-2 bg-[#1D2130] lg:mt-4 mb-4 h-1 lg:w-[15%] w-12 rounded-xl"></div>
         <div className="lg:mt-1 -mt-8 lg:space-y-12 space-y-6">
           <h2 className="font-roboto text-xl text-center text-[#1D2130] lg:text-left">
             À PROPOS DE NOUS

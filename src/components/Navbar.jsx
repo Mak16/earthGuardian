@@ -49,7 +49,7 @@ function Navbar() {
   return (
     <>
       <div className="relative z-50">
-        <div className="flex flex-row justify-between  xl:py-2 py-1 xl:px-10 px-5 top-0 bg-white items-center fixed w-full">
+        <div className="flex flex-row lg:justify-around justify-between  xl:py-2 py-1 xl:px-10 px-5 top-0 bg-white items-center fixed w-full">
           <Link to="">
             <img
               className="sm:max-w-[130px] py-2 max-w-[100px]"

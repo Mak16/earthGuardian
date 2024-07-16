@@ -9,7 +9,7 @@ export default function Banner() {
         className="flex flex-col justify-start bg-cover bg-no-repeat md:bg-center bg-top h-[60vh] md:h-screen w-full mt-20 md:mt-24"
         style={{ backgroundImage: `url(${img})` }}
       >
-        <div className="lg:w-[50%] lg:ml-28 m-auto flex flex-col justify-center items-center lg:items-start w-[90%]">
+        <div className="lg:w-[50%] lg:ml-28 m-auto flex flex-col justify-center items-center lg:items-start w-[100%]">
           <p className="md:text-[4rem] font-roboto text-[2rem] font-semibold lg:text-left text-center text-white md:mt-36 lg:mt-28">
             Sauver l'environnement aujourd'hui pour un meilleur avenir
           </p>
