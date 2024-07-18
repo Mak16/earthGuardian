@@ -44,7 +44,7 @@ export default function AboutUs() {
           </p>
           <div className="mt-10 flex justify-center lg:justify-start">
             <Link
-              to=""
+              to="/about"
               className=" bg-[#70C174] font-roboto text-white py-3 px-5 rounded-md"
             >
               Voir plus

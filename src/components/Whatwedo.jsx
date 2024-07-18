@@ -1,6 +1,4 @@
 import React from "react";
-import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
 import dogImg from "../assets/images/whatWeDo/peacock.jpg";
 import town from "../assets/images/whatWeDo/town.svg";
 import tree from "../assets/images/whatWeDo/tree.svg";

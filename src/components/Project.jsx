@@ -50,7 +50,7 @@ function OneProject({ project }) {
     </div>
   );
 }
-export default function Project({}) {
+export default function Project() {
   const sortedProjects = projects.sort((a, b) =>
     moment(b.date, "YYYYMMDD").diff(moment(a.date, "YYYYMMDD"))
   );
