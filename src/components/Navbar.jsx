@@ -11,13 +11,13 @@ function Navbar() {
   const links = [
     {
       name: "Accueil",
-      link: "",
+      link: "/",
       className:
         "text-[#525560] font-semibold font-roboto flex justify-center md:text-xl semibold  items-center text-center text-center h-[50px]",
     },
     {
-      name: "Apropos",
-      link: "",
+      name: "A propos",
+      link: "/about",
       className:
         "text-[#525560] font-semibold font-roboto flex justify-center md:text-xl items-center text-center text-center h-[50px]",
     },
