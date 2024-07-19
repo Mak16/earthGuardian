@@ -6,18 +6,19 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
 import Media from "./pages/Media";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className=" w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/whatwedo" element={<WhatWeDo />} />
           <Route path="/media" element={<Media />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />

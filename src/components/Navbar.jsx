@@ -35,7 +35,7 @@ function Navbar() {
     },
     {
       name: "Contact",
-      link: "",
+      link: "/contact",
       className:
         "text-[#525560] font-semibold font-roboto flex justify-center md:text-xl items-center text-center text-center h-[50px]",
     },
