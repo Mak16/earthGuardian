@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
+import Media from "./pages/Media";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/whatwedo" element={<WhatWeDo />} />
+          <Route path="/media" element={<Media />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </div>
