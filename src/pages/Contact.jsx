@@ -1,6 +1,6 @@
 import React from "react";
 import ContactUs from "../components/ContactUs";
-import ContactForm from "../assets/forms/ContactForm";
+import ContactForm from "../forms/ContactForm";
 import MapComponent from "../components/MapComponent";
 
 export default function Contact() {

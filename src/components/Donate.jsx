@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import bgImg from "../assets/images/to-protect-450596.jpg";
 import { Link } from "react-router-dom";
+import JoinForm from "../forms/JoinForm";
 export default function Donate() {
+  const [show, setShow] = useState(false);
+
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const hideModal = () => {
+    setShow(false);
+  };
   return (
     <div
       className="w-[90%] bg-cover flex justify-center items-center bg-center bg-no-repeat h-[70vh] relative mx-auto my-16 rounded-2xl"
@@ -14,7 +24,7 @@ export default function Donate() {
         </p>
         <div className="flex flex-row space-x-5 justify-center items-center mt-5">
           <div className="bg-[#70C174] lg:w-60 w-72 flex justify-center items-center h-12 rounded-md">
-            <Link className="text-white text-center">
+            <Link onClick={showModal} className="text-white text-center">
               Adhérer comme bénévole
             </Link>
           </div>
@@ -22,6 +32,7 @@ export default function Donate() {
             <Link className="text-[#1D2130]">Faire un don</Link>
           </div>
         </div>
+        <JoinForm show={show} handleClose={hideModal} />
       </div>
     </div>
   );
