@@ -9,7 +9,7 @@ export default function ContactForm() {
             <label className="text-[#1D2130] font-roboto text-sm" htmlFor="">
               Prenom
             </label>
-            <input
+            <inputLink
               className="border-b-[1px] border-[#E5E5E5] py-2"
               type="text"
               placeholder="John"
