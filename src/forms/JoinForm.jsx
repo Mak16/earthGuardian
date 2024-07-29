@@ -41,12 +41,12 @@ export default function JoinForm({ show, handleClose }) {
       setFirstName("");
       setLastName("");
       setEmail("");
-      setMessage("");
+      setMessage(""); 
       setErrors({});
       handleClose(); // Fermer le modal après l'envoi réussi
     } catch (error) {
       console.error("There was an error submitting the form!", error);
-      setErrors({ submit: "An error occurred while submitting the form." });
+      setErrors(error);
     }
   };
 
