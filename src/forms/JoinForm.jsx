@@ -32,7 +32,8 @@ export default function JoinForm({ show, handleClose }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/volunteer",
+        "https://earth-guardian-api.onrender.com/volunteer",
+        // "http://localhost:9000/volunteer",
         volunteerData
       );
       console.log(response.data);
@@ -59,7 +60,7 @@ export default function JoinForm({ show, handleClose }) {
         className="fixed inset-0 bg-black opacity-50"
         onClick={handleClose}
       ></div>
-      <div className="bg-white rounded-lg p-8 z-10 lg:max-w-3xl h-[75%] overflow-scroll lg:overflow-hidden space-y-0 lg:space-y-8 w-full">
+      <div className="bg-white rounded-lg p-8 z-10 lg:max-w-3xl h-[80%] overflow-scroll space-y-0 lg:space-y-8 w-full">
         <div className="flex flex-row justify-between">
           <div className="mt-4 space-y-4">
             <p className="text-[#1D2130] font-semibold font-roboto lg:text-5xl text-2xl lg:w-2/3 w-full text-left">
