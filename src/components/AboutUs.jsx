@@ -30,17 +30,17 @@ export default function AboutUs() {
           <p className="font-roboto lg:text-5xl text-2xl text-center lg:text-left font-medium">
             Nous créons une société durable, pour tous et pour toujours.
           </p>
-          <p className="text-sm text-justify lg:text-left">
-            À propos de nous Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Aliquam a deserunt placeat, aut unde pariatur aliquid aperiam
-            numquam tempore. Quos animi, qui doloribus dolore commodi sunt vel
-            hic error et.
+          <p className="text-lg text-justify lg:text-left font-roboto">
+            Bienvenue sur Earth Guardian, la plateforme qui rassemble ceux qui
+            veulent agir pour un environnement plus propre et plus sain.
+            Rejoignez-nous dans notre mission pour protéger notre planète contre
+            la pollution.
           </p>
-          <p className="text-sm text-justify lg:text-left">
-            À propos de nous Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Aliquam a deserunt placeat, aut unde pariatur aliquid aperiam
-            numquam tempore. Quos animi, qui doloribus dolore commodi sunt vel
-            hic error et.
+          <p className="text-lg text-justify lg:text-left font-roboto">
+            Earth Guardian est une initiative dédiée à la lutte contre la
+            pollution sous toutes ses formes. Nous mobilisons des volontaires,
+            organisons des événements de sensibilisation et proposons des
+            solutions concrètes pour un environnement durable.
           </p>
           <div className="mt-10 flex justify-center lg:justify-start">
             <Link

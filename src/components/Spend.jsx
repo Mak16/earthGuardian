@@ -12,10 +12,11 @@ export default function Spend() {
             Comment nous dépensons vos dons et où ils vont
           </h3>
           <p className="text-white font-thin font-roboto lg:text-left text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem,
-            velit similique, eligendi nihil, tenetur consequatur consequuntur
-            magni ut temporibus hic incidunt ipsam vitae et. Qui deserunt
-            mollitia et maiores.
+            Chaque don compte. Vos contributions financent nos actions sur le
+            terrain, la plantation d'arbres, la protection des habitats
+            naturels, et la sensibilisation à l'environnement. Nous veillons à
+            ce que chaque centime soit utilisé de manière transparente et
+            efficace pour maximiser l'impact de notre mission.
           </p>
           <div className="flex justify-center lg:justify-start">
             <LegendComponent legend={legend} />

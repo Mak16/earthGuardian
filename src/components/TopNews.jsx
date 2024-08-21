@@ -146,9 +146,8 @@ export default function TopNews() {
           <h2 className="font-roboto font-semibold lg:text-5xl text-2xl text-center text-[#1D2130]">
             Lire nos dernières nouvelles
           </h2>
-          <p className="font-roboto text-sm lg:w-1/4 w-full mx-auto text-center text-[#1D2130]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim
+          <p className="font-roboto text-lg lg:w-2/5 w-full mx-auto text-center text-[#1D2130]">
+          Découvrez nos dernières actualités, communiqués de presse, et couvertures médiatiques. Restez informé sur nos initiatives et impact grâce à nos mises à jour régulières et articles.
           </p>
         </div>
         <div className="flex lg:flex-row flex-col gap-8">

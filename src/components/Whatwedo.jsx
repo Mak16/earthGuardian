@@ -15,7 +15,7 @@ function Object({ src, title, description }) {
         <h3 className="font-medium font-roboto text-[#1D2130] text-2xl">
           {title}
         </h3>
-        <p className="text-sm text-[#1D2130] text-justify lg:text-left font-light">
+        <p className="text-sm text-justify lg:text-left font-light font-roboto text-[#1D2130]">
           {description}
         </p>
       </div>
@@ -36,11 +36,11 @@ export default function Whatwedo() {
             <p className="font-roboto lg:text-5xl text-2xl text-center lg:text-left font-medium">
               Nous prenons soin de la terre et de la génération future
             </p>
-            <p className="text-sm text-justify  lg:text-left">
-              À propos de nous Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Aliquam a deserunt placeat, aut unde pariatur
-              aliquid aperiam numquam tempore. Quos animi, qui doloribus dolore
-              commodi sunt vel hic error et.
+            <p className="text-lg text-justify  lg:text-left font-roboto text-[#1D2130]">
+              Nos actions s'étendent à divers domaines : nettoyage de sites
+              pollués, sensibilisation du public, et plaidoyer pour des
+              politiques environnementales plus strictes. Ensemble, nous créons
+              un impact positif durable.
             </p>
             <div className="mt-10 flex m-auto">
               <div className="w-[2px] mt-10 lg:mt-4 h-[84vh] lg:h-[45vh] bg-[#E5E5E5]" />
@@ -48,30 +48,22 @@ export default function Whatwedo() {
                 <Object
                   src={town}
                   title="Bâtir des villes saines"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea
-                consequatur accusantium, iusto consectetur error quod dolores iure
-                fuga incidunt debitis voluptatum perferendis reiciendis eaque numquam"
+                  description="Nous œuvrons pour des villes plus propres et vertes en promouvant la gestion responsable des déchets et l'urbanisation durable. Ensemble, nous créons des espaces urbains où il fait bon vivre."
                 />
                 <Object
                   src={tree}
                   title="Plantation d'arbres"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea
-                consequatur accusantium, iusto consectetur error quod dolores iure
-                fuga incidunt debitis voluptatum perferendis reiciendis eaque numquam"
+                  description="La reforestation est au cœur de notre mission. Chaque arbre planté aide à lutter contre le changement climatique et à préserver la biodiversité pour un avenir plus vert."
                 />
                 <Object
                   src={water}
                   title="Protéger la terre et l'eau"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea
-                consequatur accusantium, iusto consectetur error quod dolores iure
-                fuga incidunt debitis voluptatum perferendis reiciendis eaque numquam"
+                  description=" Nous protégeons les sols et les cours d'eau en luttant contre la pollution et en encourageant des pratiques durables. Préservons ces ressources vitales pour les générations futures."
                 />
                 <Object
                   src={animal}
                   title="Sécurité des animaux"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea
-                consequatur accusantium, iusto consectetur error quod dolores iure
-                fuga incidunt debitis voluptatum perferendis reiciendis eaque numquam"
+                  description="Nous protégeons les animaux en danger et leurs habitats naturels. Ensemble, nous luttons pour préserver la biodiversité et assurer la sécurité de la faune sauvage."
                 />
               </div>
             </div>

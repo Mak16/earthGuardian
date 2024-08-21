@@ -14,11 +14,11 @@ export default function Mission() {
               Nous créons le monde, nous sauvons notre propre environnement
             </p>
             <p className="text-[#1D2130] font-normal text-center lg:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+              Notre mission est de protéger l'environnement en menant des
+              actions concrètes contre la pollution, en restaurer les
+              écosystèmes dégradés et en sensibilisant les communautés à la
+              durabilité. Nous agissons pour un avenir plus vert et plus sain
+              pour tous.
             </p>
           </div>
           <div className="lg:w-1/2 w-full space-y-5">
@@ -30,11 +30,10 @@ export default function Mission() {
               monde
             </p>
             <p className="text-[#1D2130] font-normal text-center lg:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+              Nous envisageons un monde où l'harmonie entre les humains et la
+              nature est restaurée. En intégrant des pratiques durables et en
+              renforçant les efforts de conservation, nous aspirons à créer un
+              environnement sain pour les générations futures.
             </p>
           </div>
         </div>

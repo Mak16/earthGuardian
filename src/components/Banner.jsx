@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../assets/images/soil.jpg";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -14,9 +15,9 @@ export default function Banner() {
             Sauver l'environnement aujourd'hui pour un meilleur avenir
           </p>
           <div className="flex flex-row justify-start gap-2 mt-5">
-            <span className="text-[#525560] font-roboto font-semibold bg-white rounded-md lg:text-xl md:text-lg text-sm flex justify-center items-center px-3">
+            <Link to="/whatwedo" className="text-[#525560] font-roboto font-semibold bg-white rounded-md lg:text-xl md:text-lg text-sm flex justify-center items-center px-3">
               Ce que nous faisons
-            </span>
+            </Link>
             <div className="flex flex-row justify-center items-center">
               <Icon
                 icon="icon-park-solid:play"
