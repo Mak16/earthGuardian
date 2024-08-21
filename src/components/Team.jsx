@@ -126,8 +126,7 @@ export default function Team() {
           Notre équipe
         </p>
         <p className="font-roboto text-md font-thin mx-auto text-center text-[#1D2130] lg:w-1/3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.
+        Notre équipe est constituée d'experts passionnés et de volontaires engagés, unis pour protéger notre planète et promouvoir la durabilité.
         </p>
       </div>
       <div>

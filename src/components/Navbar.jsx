@@ -41,7 +41,7 @@ function Navbar() {
     },
     {
       name: `Faire un don`,
-      link: "",
+      link: "/donate",
       className:
         "bg-[#1D2130] font-bold font-roboto text-white flex justify-center md:text-xl items-center text-center text-center w-[200px]  h-[50px] rounded-[5px] px-1",
     },
@@ -59,7 +59,7 @@ function Navbar() {
           </Link>
           <ul className="hidden lg:flex gap-10">
             {links.map((link) => (
-              <li key={link.name}>
+              <li className="hover:bg-gray-100 px-6 rounded-lg transition duration-300" key={link.name}>
                 <Link to={link.link} className={link.className}>
                   {link.name}
                 </Link>

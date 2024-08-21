@@ -34,14 +34,10 @@ export default function About() {
         </div>
         <div className="lg:w-2/5 w-full justify-center flex flex-col lg:mt-20 -mt-8 lg:space-y-8 space-y-6">
           <p className="font-roboto text-justify lg:text-left font-semibold text-xl">
-            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-            ut sem vitae risus tristique posuere.
+          Ensemble, nous travaillons pour un avenir plus durable et sain.
           </p>
           <p className="text-justify lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Suspendisse varius enim elementum tristique.
+          Earth Guardian est dédié à la protection de notre planète. Nous nous engageons à combattre la pollution, à promouvoir la durabilité, et à renforcer les communautés. Avec des initiatives telles que la reforestation, la préservation des ressources naturelles, et la protection des animaux, nous travaillons chaque jour pour un avenir plus vert et plus sain pour tous. Rejoignez-nous dans notre mission pour faire la différence.
           </p>
         </div>
       </div>

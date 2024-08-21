@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
 import Media from "./pages/Media";
 import Contact from "./pages/Contact";
+import ReturnPage from "./pages/ReturnPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/whatwedo" element={<WhatWeDo />} />
           <Route path="/media" element={<Media />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<ReturnPage/>} />
         </Routes>
       </div>
       <Footer />

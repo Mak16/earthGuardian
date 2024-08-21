@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import axios from "axios";
+import { API_BASE_URL } from "../../config";
 
 export default function JoinForm({ show, handleClose }) {
   const [firstName, setFirstName] = useState("");
@@ -8,7 +9,9 @@ export default function JoinForm({ show, handleClose }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const API_URL= import.meta.env.API_URL
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,16 +27,16 @@ export default function JoinForm({ show, handleClose }) {
     }
 
     const volunteerData = {
-      first_name: firstName,
-      last_name: lastName,
+      first_name : firstName,
+      last_name : lastName,
       email: email,
       message: message,
     };
 
     try {
       const response = await axios.post(
-        "https://earth-guardian-api.onrender.com/volunteer",
-        // "http://localhost:9000/volunteer",
+        // "https://earth-guardian-api.onrender.com/volunteer",
+        `${API_BASE_URL}volunteer`,
         volunteerData
       );
       console.log(response.data);
@@ -41,7 +44,7 @@ export default function JoinForm({ show, handleClose }) {
       setFirstName("");
       setLastName("");
       setEmail("");
-      setMessage(""); 
+      setMessage("");
       setErrors({});
       handleClose(); // Fermer le modal après l'envoi réussi
     } catch (error) {
@@ -60,15 +63,15 @@ export default function JoinForm({ show, handleClose }) {
         className="fixed inset-0 bg-black opacity-50"
         onClick={handleClose}
       ></div>
-      <div className="bg-white rounded-lg p-8 z-10 lg:max-w-3xl h-[80%] overflow-scroll space-y-0 lg:space-y-8 w-full">
+      <div className="bg-white rounded-lg p-8 z-10 lg:max-w-3xl h-[85%] mt-12 overflow-scroll lg:overflow-hidden space-y-0 lg:space-y-8 w-full">
         <div className="flex flex-row justify-between">
           <div className="mt-4 space-y-4">
             <p className="text-[#1D2130] font-semibold font-roboto lg:text-5xl text-2xl lg:w-2/3 w-full text-left">
-              Join as a volunteer
+              Adhérer comme bénévole
             </p>
-            <p className="text-[#1D2130] font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen
-              varius enim in eros elementum tristique.
+            <p className="text-[#1D2130] font-normal font-roboto">
+              Agissez pour un avenir durable : rejoignez-nous en tant que
+              volontaire.
             </p>
           </div>
           <Icon

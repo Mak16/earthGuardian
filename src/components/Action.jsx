@@ -16,7 +16,7 @@ function Object({ src, title, description }) {
         <h3 className="font-medium font-roboto text-[#1D2130] text-xl">
           {title}
         </h3>
-        <p className="text-sm text-[#1D2130] text-justify lg:text-left font-thin">
+        <p className="text-sm text-[#1D2130] text-justify lg:text-left font-thin font-roboto">
           {description}
         </p>
       </div>
@@ -38,32 +38,32 @@ export default function Action() {
             <Object
               src={town}
               title="Bâtir des villes saines"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
-            />
+              description="Nous œuvrons pour des villes plus propres et vertes en promouvant la gestion responsable des déchets et l'urbanisation durable. Ensemble, nous créons des espaces urbains où il fait bon vivre."
+              />
             <Object
               src={tree}
               title="Plantation d'arbres"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
-            />
+              description="La reforestation est au cœur de notre mission. Chaque arbre planté aide à lutter contre le changement climatique et à préserver la biodiversité pour un avenir plus vert."
+              />
             <Object
               src={water}
               title="Protéger la terre et l'eau"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
-            />
+              description=" Nous protégeons les sols et les cours d'eau en luttant contre la pollution et en encourageant des pratiques durables. Préservons ces ressources vitales pour les générations futures."
+              />
             <Object
               src={animal}
               title="Sécurité des animaux"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
-            />
+              description="Nous protégeons les animaux en danger et leurs habitats naturels. Ensemble, nous luttons pour préserver la biodiversité et assurer la sécurité de la faune sauvage."
+              />
             <Object
               src={biodiversity}
               title="Durabilité des ressources en eau"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+              description="Nous travaillons à préserver les ressources en eau en promouvant une gestion responsable et des pratiques durables. Notre objectif est de garantir un accès à de l'eau propre pour tous, tout en protégeant les écosystèmes aquatiques."
             />
             <Object
               src={durability}
               title="Biodiversité"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+              description="Nous nous engageons à protéger la biodiversité en préservant les habitats naturels et en soutenant les espèces menacées. Notre but est de maintenir un équilibre écologique essentiel à la vie sur Terre."
             />
           </div>
         </div>
