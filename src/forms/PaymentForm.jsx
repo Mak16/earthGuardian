@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import axios from "axios";
-import { CINETPAY_API_KEY, CINETPAY_SITE_ID, SITE_URL } from "../../config";
+import { API_BASE_URL, CINETPAY_API_KEY, CINETPAY_SITE_ID, SITE_URL } from "../../config";
 
 
 const PaymentForm = ({ show, handleClose }) => {
@@ -80,7 +80,7 @@ const PaymentForm = ({ show, handleClose }) => {
               status: status,
               transactionId: transaction_id,
             };
-            axios.post(`http://localhost:9000/donation/create`, donationData)
+            axios.post(`${API_BASE_URL}donation/create`, donationData)
           } else {
             setMessage(response.data.description);// Affiche le message d'erreur
             setStatus("failed") 
