@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import axios from "axios";
-import { CINETPAY_API_KEY, CINETPAY_SITE_ID, SITE_URL } from "../../config";
+import { API_BASE_URL, CINETPAY_API_KEY, CINETPAY_SITE_ID, SITE_URL } from "../../config";
 
 
 const PaymentForm = ({ show, handleClose }) => {
@@ -14,10 +14,11 @@ const PaymentForm = ({ show, handleClose }) => {
   const [lastName, setLastName] = useState("");
   const [errors, setErrors] = useState({});
   const [error, setError] = useState({});
-  const [status, setStatus] = useState("");
 
   const handlePayment = async (e) => {
     e.preventDefault();
+
+    // Validation des champs
     if (!amount || !currency || !phoneNumber || !description) {
       setMessage("Tous les champs doivent être remplis.");
       return;
@@ -30,8 +31,10 @@ const PaymentForm = ({ show, handleClose }) => {
       setErrors(newErrors);
       return;
     }
+
     const transaction_id = Math.floor(Math.random() * 100000000).toString();
 
+    // Préparation des données pour CinetPay
     var data = JSON.stringify({
       apikey: CINETPAY_API_KEY,
       site_id: CINETPAY_SITE_ID,
@@ -42,8 +45,9 @@ const PaymentForm = ({ show, handleClose }) => {
       customer_name: lastName,
       customer_surname: firstName,
       customer_phone_number: phoneNumber,
-      notify_url: "https://kadea.co",
-      return_url: `${SITE_URL}donate/${transaction_id}`,
+      notify_url: `${API_BASE_URL}donation/notify`, // URL de notification pour les retours CinetPay
+      return_url: `${SITE_URL}donate`, // URL de retour après paiement
+      // return_url: `${SITE_URL}donate/${transaction_id}`, // URL de retour après paiement
       channels: "MOBILE_MONEY",
       lang: "FR",
     });
@@ -58,43 +62,37 @@ const PaymentForm = ({ show, handleClose }) => {
     };
 
     try {
-      axios(config)
-        .then(function (response) {
-          console.log(JSON.stringify(response.data));
+      // Appel à l'API CinetPay
+      const response = await axios(config);
 
-          console.log(response.data.code == 201);
+      if (response.data.code == 201) {
+        // Paiement initié avec succès
+        setMessage(response.data.description);
+        
+        // Enregistrement du don dans la base de données
+        const donationData = {
+          firstName: firstName,
+          lastName: lastName,
+          phoneNumber: phoneNumber,
+          amount: amount,
+          currency: currency,
+          description: description,
+          status: "pending", // Status initial, à mettre à jour après la confirmation du paiement
+          transactionId: transaction_id,
+        };
 
-          if (response.data.code == 201) {
-            setMessage(response.data.description);
-            setStatus("success");
-            console.log(response.data?.data?.payment_url);
-            window.location.href = response.data?.data?.payment_url;
-            // Save donation data to backend
-            const donationData = {
-              firstName:firstName,
-              lastName:lastName,
-              phoneNumber:phoneNumber,
-              amount:amount,
-              currency:currency,
-              description:description,
-              status: status,
-              transactionId: transaction_id,
-            };
-            axios.post(`http://localhost:9000/donation/create`, donationData)
-          } else {
-            setMessage(response.data.description);// Affiche le message d'erreur
-            setStatus("failed") 
-          }
-        })
-        .catch(function (error) {
-          console.log(error);
-          setMessage("Erreur dans le traitement de la transaction");
-          setStatus("failed"); // En cas d'erreur, définir le statut comme "failed"
-        });
+        // Requête POST pour enregistrer le don
+        await axios.post(`${API_BASE_URL}donation/create`, donationData);
+
+        // Redirection vers la page de paiement
+        window.location.href = response.data?.data?.payment_url;
+      } else {
+        // Affichage du message d'erreur en cas de problème
+        setMessage(response.data.description);
+      }
     } catch (error) {
       console.error("Error in handlePayment:", error);
-      setMessage(`Erreur : ${error.response?.data?.message || error.message}`);
-      setStatus("failed"); // En cas d'erreur, définir le statut comme "failed"
+      setMessage("Erreur dans le traitement de la transaction.");
     }
   };
 
